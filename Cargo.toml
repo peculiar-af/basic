@@ -1,6 +1,7 @@
 [package]
 name = "basic"
 version = "0.1.0"
-authors = ["peculiar"]
+authors = ["peculiar", "algentile"]
 
 [dependencies]
+image = "*"
