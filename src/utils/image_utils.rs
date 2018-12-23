@@ -1,10 +1,10 @@
 extern crate image;
 
-use std::io::File;
-use image::{GenericImage, DynamicImage, ImageBuffer, imageops};
+// use std::io::File;
+use image::{GenericImageView, DynamicImage};
 
 pub fn load_image(filepath: &str) -> DynamicImage {
-    let mut loaded_image = image::open(filepath).unwrap();
+    let loaded_image: DynamicImage = image::open(filepath).unwrap();
     return loaded_image; 
 }
 
@@ -14,11 +14,11 @@ mod tests {
 
     #[test]
     fn test_load_image() {
-        const test_file = "../images/dog.png"
-        const loaded_image = load_image
-        const width, height = loaded_image.dimensions();
+        //tests are run from root src directory
+        const TEST_FILE: &str =  "src/images/dog.png";
+        let loaded_image: DynamicImage = load_image(TEST_FILE);
+        let (width, height) = loaded_image.dimensions();
 
         assert!(width > 0 && height > 0);
-        println!("{:?}", loaded_image.dimensions());
     }
 }
