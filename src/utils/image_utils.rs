@@ -1,6 +1,5 @@
 extern crate image;
 
-// use std::io::File;
 use image::{GenericImageView, DynamicImage};
 
 pub fn load_image(filepath: &str) -> DynamicImage {
