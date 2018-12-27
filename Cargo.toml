@@ -5,3 +5,4 @@ authors = ["peculiar", "algentile"]
 
 [dependencies]
 image = "*"
+raster = "0.2.0"
